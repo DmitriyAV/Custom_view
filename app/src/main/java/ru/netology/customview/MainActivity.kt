@@ -8,11 +8,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<StatsView>(R.id.stats).data = listOf(
-            500F,
-            500F,
-            500F,
-            500F
-        )
+        val view = findViewById<StatsView>(R.id.stats)
+        view.postDelayed({
+            view.data = listOf(
+                500F,
+                500F,
+                500F,
+                500F,
+            )
+        }, 3000)
     }
 }
